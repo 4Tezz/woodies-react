@@ -1,0 +1,72 @@
+.presentation {
+    overflow: hidden;
+
+    &__container {
+        min-height: 800px;
+        background: url('/assets/images/table.jpg') no-repeat 100% 100%;
+    }
+
+    &__subtitle,
+    &__subtitle strong {
+        font-weight: normal;
+        font-size  : 36px;
+        line-height: 49px;
+        color      : #3E3F43;
+    }
+
+    &__subtitle strong {
+        font-weight: 700;
+    }
+
+    &__title {
+        font-size: 72px;
+        color    : #313235;
+        margin   : 18px 0 15px 0;
+    }
+
+    &__content {
+        width  : 584px;
+        padding: 217px 0 0 102px;
+    }
+}
+
+@media (max-width: $MediumDesktops) {
+    .presentation {
+
+        &__subtitle,
+        &__subtitle strong {
+            font-size: 29px;
+        }
+
+
+        &__title {
+            font-size: 60px;
+            margin   : 18px 0 16px 0;
+        }
+
+        &__content {
+            width  : 584px;
+            padding: 157px 0 0 52px;
+        }
+    }
+}
+
+@media (max-width: $LandscapePhones) {
+    .presentation__content {
+        width  : 100%;
+        padding: 167px 10px 0;
+    }
+}
+
+
+@media (max-width: $LandscapeSmaller) {
+    .presentation__content {
+        text-align: center;
+        padding   : 170px 5px 0;
+    }
+
+    .presentation__container {
+        background: none;
+        min-height: auto;
+    }
+}

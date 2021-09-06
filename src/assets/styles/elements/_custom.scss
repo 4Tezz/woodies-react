@@ -1,0 +1,86 @@
+.custom {
+    overflow: hidden;
+
+    &__container {
+        min-height    : 453px;
+        display       : flex;
+        flex-direction: column;
+        padding       : 120px 100px 0;
+
+        .btn-orange {
+            align-self: center;
+        }
+    }
+
+    &__content {
+        display      : flex;
+        margin-bottom: 64px;
+    }
+
+    &__title {
+        margin: 14px 0 87px 38px;
+
+        &:after {
+            content   : '';
+            width     : 65px;
+            height    : 1px;
+            position  : absolute;
+            background: #000000;
+            top       : 22px;
+            left      : 270px;
+        }
+    }
+
+    &__card {
+        min-width: 238px;
+        height   : 177px;
+
+        &__image {
+            margin: 0 0 17px 58px;
+        }
+
+        &:last-child &__image {
+            margin-left: 66px;
+        }
+
+        &__title {
+            font-size  : 24px;
+            margin-left: 32px;
+        }
+
+        &:nth-last-child(-n+2) &__title {
+            margin-left: 59px;
+        }
+    }
+}
+
+@media (max-width: $MediumDesktops) {
+    .custom__container {
+        padding: 120px 50px 0;
+    }
+}
+
+@media (max-width: $MediumDesktops - 118) {
+    .custom {
+        &__container {
+            padding: 120px 25px 0;
+        }
+
+        &__title {
+            margin: 14px 0 50px 20px;
+        }
+
+        &__content {
+            overflow-x: auto;
+        }
+    }
+}
+
+
+@media (max-width: $LandscapePhones) {
+    .custom {
+        &__container {
+            padding: 20px 15px 0;
+        }
+    }
+}

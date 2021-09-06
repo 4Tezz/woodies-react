@@ -1,0 +1,95 @@
+.header-root {
+    width   : 100%;
+    position: absolute;
+
+    .container {
+        min-height : 80px;
+        display    : flex;
+        align-items: center;
+    }
+}
+
+.nav {
+    margin-left: 10%;
+    transition : transform .4s;
+    z-index    : 100;
+
+    &__brand {
+        width      : 192px;
+        height     : 33px;
+        margin-left: 80px;
+    }
+
+    &__list {
+        list-style : none;
+        display    : flex;
+        margin-left: auto;
+    }
+
+
+    &__item {
+        margin-right: 48px;
+    }
+
+    &__link {
+        color     : rgba(34, 34, 34, 0.75);
+        transition: .3s;
+
+        &.active,
+        &:hover {
+            color: #DAA520;
+        }
+    }
+}
+
+
+@media (max-width: $MediumDesktops) {
+    .header-root .container {
+        padding: 0 10px;
+    }
+
+    .nav {
+        opacity   : 0;
+        display   : block;
+        position  : fixed;
+        right     : 0;
+        top       : 0;
+        bottom    : 0;
+        height    : 100%;
+        background: #fff;
+        width     : 70%;
+        transform : translateX(100%);
+
+        &__sign-up {
+            margin-left: auto;
+        }
+
+        &.active {
+            opacity  : 100;
+            transform: translateX(0);
+
+            .nav__list {
+                display       : flex;
+                flex-direction: column;
+                align-items   : flex-end;
+                padding       : 100px 20px 0 0;
+            }
+
+            .nav__item {
+                margin: 35px 0 0 0;
+            }
+
+            .nav__link {
+                font-size: 22px;
+            }
+        }
+
+        &__brand {
+            margin: 0 0 0 10px;
+        }
+    }
+
+    .btn-toggler {
+        display: block;
+    }
+}

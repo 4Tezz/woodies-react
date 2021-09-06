@@ -1,0 +1,92 @@
+.title {
+    font-size: 36px;
+    color    : #3E3F43;
+    position : relative;
+}
+
+.container {
+    max-width: 1152px;
+    margin   : 0 auto;
+}
+
+.btn-orange {
+    padding      : 14px 24px;
+    font-style   : normal;
+    font-weight  : bold;
+    line-height  : 22px;
+    color        : #FFFFFF;
+    background   : #DAA520;
+    border-radius: 4px;
+    transition   : .4s;
+
+    &:hover {
+        cursor       : pointer;
+        border-radius: 24px;
+    }
+
+    border: none;
+}
+
+.btn-toggler {
+    display   : none;
+    width     : 35px;
+    height    : 42px;
+    position  : relative;
+    margin    : 0 10px;
+    border    : none;
+    background: none;
+    z-index   : 101;
+
+    span,
+    &:before,
+    &::after {
+        display            : block;
+        position           : absolute;
+        width              : 100%;
+        height             : 2px;
+        background-color   : #121212;
+        transition-duration: .25s;
+    }
+
+    &:after {
+        content: '';
+        top    : 35px;
+    }
+
+    &:before {
+        content: '';
+        top    : 8px;
+    }
+}
+
+
+.btn-toggler.active {
+    span {
+        transform: scale(0);
+    }
+
+    &:before {
+        transform: rotate(-45deg);
+        top      : auto;
+    }
+
+    &:after {
+        transform: rotate(45deg);
+        top      : auto;
+    }
+}
+
+
+.btn {
+    font-weight  : bold;
+    color        : #3E3F43;
+    border       : 1px solid #3E3F43;
+    background   : none;
+    padding      : 9px 35px;
+    border-radius: 8px;
+
+    &:hover {
+        cursor : pointer;
+        opacity: 70%;
+    }
+}

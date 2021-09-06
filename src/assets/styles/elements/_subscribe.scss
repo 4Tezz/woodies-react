@@ -1,0 +1,108 @@
+.subscribe {
+    overflow  : hidden;
+    margin-top: 150px;
+
+    &__container {
+        display   : flex;
+        min-height: 152px;
+        padding   : 0 0 0 91px;
+    }
+
+    &__content {
+        padding-left: 16px;
+        width       : 493px;
+    }
+
+    &__title {
+        font-size: 18px;
+    }
+
+    &__text {
+        font-weight: 400;
+        font-size  : 16px;
+    }
+
+    &__form {
+        margin: 12px 0 0 10px;
+
+        &__control {
+            border       : 1px solid #DAA520;
+            border-radius: 4px;
+            height       : 39px;
+            padding      : 0 120px 0 16px;
+            max-width    : 311px;
+            width        : 100%;
+            border-radius: 3px;
+
+            &::placeholder {
+                color: #AFAFAF;
+            }
+
+            &:active,
+            &:focus {
+                outline: none;
+                border : 1px solid #DAA520;
+            }
+        }
+
+        span {
+            position: relative;
+            display : inline-block;
+            height  : 40px;
+            width   : 448px;
+        }
+
+        .btn-orange {
+            position     : absolute;
+            border-radius: 0;
+            padding      : 11px 24px;
+            font-weight  : 600;
+            height       : 40px;
+            right        : 0;
+            bottom       : 0;
+            top          : 0;
+        }
+    }
+}
+
+@media (max-width: $MediumDesktops) {
+    .subscribe {
+        &__container {
+            padding: 0 40px;
+        }
+
+        &__content {
+            text-align: center;
+        }
+
+        &__form {
+            &__control {
+                max-width: 241px;
+            }
+
+            span {
+                width: 378px;
+            }
+        }
+    }
+}
+
+@media (max-width: $LandscapePhones) {
+    .subscribe {
+        margin-top: 0;
+
+        &__container {
+            flex-direction: column;
+            align-items   : center;
+            padding       : 0;
+        }
+
+        &__content {
+            padding: 0 10px;
+        }
+
+        &__text {
+            padding: 0 25px;
+        }
+    }
+}

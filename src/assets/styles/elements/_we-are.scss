@@ -1,0 +1,136 @@
+.we-are {
+    overflow: hidden;
+
+    &__container {
+        min-height    : 950px;
+        display       : flex;
+        flex-direction: column;
+    }
+
+    &__box {
+        display    : flex;
+        margin-left: 100px;
+
+        &.top {
+            margin-top: 65px;
+        }
+
+        &.bottom {
+            margin-top: 40px;
+        }
+    }
+
+    &__title {
+        margin: 144px 0 0 138px;
+
+        &::after {
+            content   : '';
+            position  : absolute;
+            width     : 316px;
+            height    : 1px;
+            background: #000000;
+            top       : 24px;
+            left      : 218px;
+        }
+
+        &-top,
+        &-bottom {
+            font-weight  : 600;
+            font-size    : 36px;
+            color        : #3E3F43;
+            line-height  : 49px;
+            margin-bottom: 15px;
+
+            strong {
+                font-weight: 800;
+                font-size  : 36px;
+            }
+        }
+    }
+
+    &__text {
+        font-weight: 600;
+        font-size  : 24px;
+        line-height: 33px;
+        color      : #000000;
+    }
+
+    &__content {
+        &-top {
+            padding: 105px 90px 0 78px;
+        }
+
+        &-bottom {
+            padding: 120px 25px 0 0;
+        }
+    }
+}
+
+@media (max-width: $MediumDesktops) {
+    .we-are {
+        &__text {
+            font-size: 19px;
+        }
+
+        &__title {
+            margin: 120px 0 0 35px;
+
+            &-top,
+            &-bottom {
+                font-size: 30px;
+
+                strong {
+                    font-size: 30px
+                }
+            }
+        }
+
+        &__box {
+            margin: 50px 10px 0 10px;
+        }
+
+        &__content {
+            &-top {
+                padding: 75px 10px 0 10px;
+            }
+
+            &-bottom {
+                padding: 60px 25px 0 0;
+            }
+        }
+    }
+}
+
+@media (max-width: $LandscapePhones) {
+    .we-are {
+        &__title {
+            margin: 90px 0 0 15px
+        }
+
+        &__image {
+
+            &-top,
+            &-bottom {
+                position: absolute;
+                opacity : 85%;
+            }
+
+            &-bottom {
+                right: 10px;
+            }
+        }
+
+        &__box {
+            margin-bottom: 200px;
+        }
+
+        &__content {
+
+            &-top,
+            &-bottom {
+                z-index     : 99;
+                padding-left: 35px;
+            }
+        }
+    }
+}
